@@ -21,7 +21,7 @@ export default function Home() {
     // Fonction pour simuler un chargement de la page avec des étapes de progression
     const simulateLoading = () => {
       const totalTime = 300; // Temps total simulé pour le chargement de la page (1 seconde)
-      let startTime = Date.now(); // Temps de départ
+      const startTime = Date.now(); // Temps de départ
 
       const updateProgress = () => {
         const elapsedTime = Date.now() - startTime; // Temps écoulé depuis le début du chargement

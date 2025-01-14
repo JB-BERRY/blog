@@ -385,7 +385,7 @@ const articles = [
       section3: {
         h2: 'Creating a Stripe Checkout Session',
         p: (
-          <p className="text-base-content/90 leading-relaxed">To handle payments, you'll need a Stripe Checkout session. This calls for some coding:</p>
+          <p className="text-base-content/90 leading-relaxed">To handle payments, you&apos;ll need a Stripe Checkout session. This calls for some coding:</p>
         ),
         pre: (
           <pre className="text-xs font-mono bg-neutral text-neutral-content p-6 rounded-xl my-4 overflow-x-scroll">
