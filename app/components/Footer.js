@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="mt-12 md:mt-16 text-sm">
                 <div className="flex flex-row justify-sart items-center gap-4">
                     <Image alt="Marc Lou" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" className="rounded-full w-8 aspect-square" style={{ color: 'transparent' }} srcSet={marcSrcSet} src="/marc.ba452a56.png"/>
-                    <div className="text-left text-base-content-secondary leading-relaxed">Hey Curious 👋 I'm <Link href="https://marclou.com" target="_blank" rel="noreferrer" className="link text-base-content font-medium">Marc</Link>, the creator of ByeDispute. You can follow my work on <Link href="https://twitter.com/marc_louvion" target="_blank" rel="noreferrer" className="link text-base-content font-medium">Twitter.</Link>
+                    <div className="text-left text-base-content-secondary leading-relaxed">Hey Curious 👋 I&apos;m <Link href="https://marclou.com" target="_blank" rel="noreferrer" className="link text-base-content font-medium">Marc</Link>, the creator of ByeDispute. You can follow my work on <Link href="https://twitter.com/marc_louvion" target="_blank" rel="noreferrer" className="link text-base-content font-medium">Twitter.</Link>
                     </div>
                 </div>
             </div>

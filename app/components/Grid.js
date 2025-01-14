@@ -17,10 +17,10 @@ const Grid = () => {
                     <Link className="badge badge-sm md:badge-md hover:badge-primary " title="Posts in Stripe Fees" rel="tag" href="/category/fee">Fee</Link>
                 </div>
                 <h2 className="mb-1 text-xl md:text-2xl font-bold">
-                    <Link className="link link-hover hover:link-primary" title="Stripe Radar: Machine Learning vs. Radar for Fraud Teams – What's the Difference?" rel="bookmark" href="/stripe-radar-vs-radar-for-fraud-teams">Stripe Radar: Machine Learning vs. Radar for Fraud Teams – What's the Difference?</Link>
+                    <Link className="link link-hover hover:link-primary" title="Stripe Radar: Machine Learning vs. Radar for Fraud Teams – What's the Difference?" rel="bookmark" href="/stripe-radar-vs-radar-for-fraud-teams">Stripe Radar: Machine Learning vs. Radar for Fraud Teams – What&apos;s the Difference?</Link>
                 </h2>
                 <div className=" text-base-content/80 space-y-4">
-                    <p className="">Stripe Radar and Radar for Fraud Teams are two fraud prevention tools with difference pricing and fees. We'll compare them and help you decide which one is right for you.</p>
+                    <p className="">Stripe Radar and Radar for Fraud Teams are two fraud prevention tools with difference pricing and fees. We&apos;ll compare them and help you decide which one is right for you.</p>
                     <div className="flex items-center gap-4 text-sm">
                         <Link title="Posts by Marc Lou" className="inline-flex items-center gap-2 group" rel="author" href="/author/marc">
                             <span itemProp="author">
@@ -45,7 +45,7 @@ const Grid = () => {
                     <Link className="link link-hover hover:link-primary" title="Stripe Subscriptions Explained With a Real-World Example" rel="bookmark" href="/how-stripe-subscriptions-work">Stripe Subscriptions Explained With a Real-World Example</Link>
                 </h2>
                 <div className=" text-base-content/80 space-y-4">
-                    <p className="">Let's set up up and manage a subscription model for a fictional habit tracker app called Trackify.</p>
+                    <p className="">Let&apos;s set up up and manage a subscription model for a fictional habit tracker app called Trackify.</p>
                     <div className="flex items-center gap-4 text-sm">
                         <Link title="Posts by Marc Lou" className="inline-flex items-center gap-2 group" rel="author" href="/author/marc">
                             <span itemProp="author">
@@ -70,7 +70,7 @@ const Grid = () => {
                     <Link className="link link-hover hover:link-primary" title="Understanding Stripe Fees: A Comprehensive Guide" rel="bookmark" href="/how-to-calculate-stripe-fees">Understanding Stripe Fees: A Comprehensive Guide</Link>
                 </h2>
                 <div className=" text-base-content/80 space-y-4">
-                    <p className="">Stripe fees can be confusing. We'll break down the different fees and how to calculate them. We'll also cover how to reduce your Stripe fees.</p>
+                    <p className="">Stripe fees can be confusing. We&apos;ll break down the different fees and how to calculate them. We&apos;ll also cover how to reduce your Stripe fees.</p>
                     <div className="flex items-center gap-4 text-sm">
                         <Link title="Posts by Marc Lou" className="inline-flex items-center gap-2 group" rel="author" href="/author/marc">
                             <span itemProp="author">
@@ -95,7 +95,7 @@ const Grid = () => {
                     <Link className="link link-hover hover:link-primary" title="5 Effective Ways to Reduce Chargebacks on Stripe" rel="bookmark" href="/5-effective-ways-to-reduce-chargebacks-on-stripe">5 Effective Ways to Reduce Chargebacks on Stripe</Link>
                 </h2>
                 <div className=" text-base-content/80 space-y-4">
-                    <p className="">Each chargeback can trigger significant fees and potentially lead to Stripe account closure. Let's take a look at how to protect your business from chargebacks.</p>
+                    <p className="">Each chargeback can trigger significant fees and potentially lead to Stripe account closure. Let&apos;s take a look at how to protect your business from chargebacks.</p>
                     <div className="flex items-center gap-4 text-sm">
                         <Link title="Posts by Marc Lou" className="inline-flex items-center gap-2 group" rel="author" href="/author/marc">
                             <span itemProp="author">
@@ -121,7 +121,7 @@ const Grid = () => {
                     <Link className="link link-hover hover:link-primary" title="Code a Stripe Subscription Model With React and Nextjs" rel="bookmark" href="/how-to-code-a-stripe-subscription-model-with-react-and-nextjs">Code a Stripe Subscription Model With React and Nextjs</Link>
                 </h2>
                 <div className=" text-base-content/80 space-y-4">
-                    <p className="">Stripe subscriptions are a great way to monetize your AI tool. We'll show you how to set up a subscription model using React and NextJS</p>
+                    <p className="">Stripe subscriptions are a great way to monetize your AI tool. We&apos;ll show you how to set up a subscription model using React and NextJS</p>
                     <div className="flex items-center gap-4 text-sm">
                         <Link title="Posts by Marc Lou" className="inline-flex items-center gap-2 group" rel="author" href="/author/marc">
                             <span itemProp="author">

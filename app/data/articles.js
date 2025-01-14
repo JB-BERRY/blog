@@ -19,20 +19,20 @@ const articles = [
       section1: {
         h2: 'Introduction to Trackify\'s Offering',
         p: (
-          <p className="text-base-content/90 leading-relaxed">At its core, Trackify is a digital habit tracker designed to help users maintain their daily routines. To engage new users, Trackify offers a <strong className="text-base-content">7-day free trial</strong> of its full features. Beyond the trial, Trackify provides a <strong className="text-base-content">$9 monthly subscription</strong> plan. Let's explore how Stripe's robust subscription service brings this business model to life seamlessly.</p>
+          <p className="text-base-content/90 leading-relaxed">At its core, Trackify is a digital habit tracker designed to help users maintain their daily routines. To engage new users, Trackify offers a <strong className="text-base-content">7-day free trial</strong> of its full features. Beyond the trial, Trackify provides a <strong className="text-base-content">$9 monthly subscription</strong> plan. Let&apos;s explore how Stripe&apos;s robust subscription service brings this business model to life seamlessly.</p>
         ),
       },
       section2: {
         h2: 'Key Components of Stripe Subscriptions',
         p: (
-          <p className="text-base-content/90 leading-relaxed">According to <Link href="https://stripe.com/docs/billing/subscriptions/overview" className="link link-primary">Stripe's documentation</Link>, managing subscriptions involves several core API resources, including:</p>
+          <p className="text-base-content/90 leading-relaxed">According to <Link href="https://stripe.com/docs/billing/subscriptions/overview" className="link link-primary">Stripe&apos;s documentation</Link>, managing subscriptions involves several core API resources, including:</p>
         ),
         ul: (
           <ul className="list-inside list-disc text-base-content/90 leading-relaxed">
-            <li className="list-item"><code className="text-sm bg-base-300/50 rounded px-1 py-0.5">Product:</code> what your business offers, in Trackify's case - the habit tracker service.</li>
-            <li className="list-item"><code className="text-sm bg-base-300/50 rounded px-1 py-0.5">Price:</code> how often and how much to charge. Trackify's monthly price is set at $9.</li>
+            <li className="list-item"><code className="text-sm bg-base-300/50 rounded px-1 py-0.5">Product:</code> what your business offers, in Trackify&apos;s case - the habit tracker service.</li>
+            <li className="list-item"><code className="text-sm bg-base-300/50 rounded px-1 py-0.5">Price:</code> how often and how much to charge. Trackify&apos;s monthly price is set at $9.</li>
             <li className="list-item"><code className="text-sm bg-base-300/50 rounded px-1 py-0.5">Customer:</code> a Stripe object allowing recurring charges and tracking multiple charges for the same customer.</li>
-            <li className="list-item"><code className="text-sm bg-base-300/50 rounded px-1 py-0.5">PaymentMethod:</code> customer's payment instruments for service payment, such as credit cards.</li>
+            <li className="list-item"><code className="text-sm bg-base-300/50 rounded px-1 py-0.5">PaymentMethod:</code> customer&apos;s payment instruments for service payment, such as credit cards.</li>
             <li className="list-item"><code className="text-sm bg-base-300/50 rounded px-1 py-0.5">Subscription:</code> associate product details with the plan your customer subscribes to.</li>
             <li className="list-item"><code className="text-sm bg-base-300/50 rounded px-1 py-0.5">Invoice:</code> generated automatically for subscriptions, detailing amounts owed by the customer.</li>
             <li className="list-item"><code className="text-sm bg-base-300/50 rounded px-1 py-0.5">PaymentIntent:</code> used for dynamic payment flows, ensuring regulatory compliances and handling authentication steps.</li>
@@ -42,7 +42,7 @@ const articles = [
       section3: {
         h2: 'The Trackify Subscription Lifecycle',
         p: (
-          <p className="text-base-content/90 leading-relaxed">Here's how the subscription lifecycle unwinds from start to finish:</p>
+          <p className="text-base-content/90 leading-relaxed">Here&apos;s how the subscription lifecycle unwinds from start to finish:</p>
         ),
         ol: (
           <ol className="list-inside list-disc text-base-content/90 leading-relaxed">
@@ -50,14 +50,14 @@ const articles = [
             <li className="list-item"><strong className="text-base-content">Free Trial:</strong> Trackify offers a 7-day free trial without immediate payment, but the system anticipates a subscription after the trial ends.</li>
             <li className="list-item"><strong className="text-base-content">Subscription Initialization:</strong> Upon the conclusion of the trial, Stripe prepares for the transition to the paid subscription, pending user consent and payment information.</li>
             <li className="list-item"><strong className="text-base-content">Recurring Payments:</strong> After the paid subscription begins, Stripe handles monthly invoicing automatically, charging the stored PaymentMethod.</li>
-            <li className="list-item"><strong className="text-base-content">Cancellation Handling:</strong> If a user chooses to cancel, they retain access until the end of the billing period. Stripe doesn't renew the subscription thereafter.</li>
+            <li className="list-item"><strong className="text-base-content">Cancellation Handling:</strong> If a user chooses to cancel, they retain access until the end of the billing period. Stripe doesn&apos;t renew the subscription thereafter.</li>
           </ol>
         )
       },
       section4: {
         h2: 'Conclusion',
         p: (
-          <p className="text-base-content/90 leading-relaxed mb-4">Stripe's infrastructure provides a seamless and flexible way to manage recurring payment models like that of Trackify.<br/>From the initiation of a free trial to the handling of subscription cancellations, Stripe simplifies operational complexities, ensuring a smooth transactional experience for both the provider and the end-users.</p>
+          <p className="text-base-content/90 leading-relaxed mb-4">Stripe&apos;s infrastructure provides a seamless and flexible way to manage recurring payment models like that of Trackify.<br/>From the initiation of a free trial to the handling of subscription cancellations, Stripe simplifies operational complexities, ensuring a smooth transactional experience for both the provider and the end-users.</p>
         ),
         p2: (
           <p className="text-base-content/90 leading-relaxed">If you want to learn how to code a subscription model using React and NextJS, check out our <Link className="link link-primary" href="/blog/how-to-code-a-stripe-subscription-model-with-react-and-nextjs">Stripe Subscriptions with React and NextJS</Link> article.</p>
@@ -84,7 +84,7 @@ const articles = [
       section1: {
           h2: 'Stripe Radar\'s Machine Learning',
           p: (
-            <p className="text-base-content/90 leading-relaxed mb-4">Stripe Radar's machine learning is a powerful, automated component of Stripe's fraud detection suite. It's built into the Stripe payment platform and uses advanced algorithms to analyze transaction patterns. It's designed to detect suspicious activities without any manual input, thus streamlining the fraud-prevention process.</p>
+            <p className="text-base-content/90 leading-relaxed mb-4">Stripe Radar&apos;s machine learning is a powerful, automated component of Stripe&apos;s fraud detection suite. It&apos;s built into the Stripe payment platform and uses advanced algorithms to analyze transaction patterns. It&apos;s designed to detect suspicious activities without any manual input, thus streamlining the fraud-prevention process.</p>
           ),
           ul: (
             <ul className="list-inside list-disc text-base-content/90 leading-relaxed">
@@ -93,14 +93,14 @@ const articles = [
               <li className="lsit-item">
                 <strong className="text-base-content">Automatic Updates:</strong> The system continually adapts to new fraud trends, ensuring your business is protected against the latest threats with no additional effort on your part.</li>
               <li className="lsit-item">
-                <strong className="text-base-content">Scalability:</strong> Machine learning scales with your business, providing automated fraud detection whether you're processing dozens or millions of transactions.</li>
+                <strong className="text-base-content">Scalability:</strong> Machine learning scales with your business, providing automated fraud detection whether you&apos;re processing dozens or millions of transactions.</li>
             </ul>
           ),
       },
       section2: {
         h2: 'Radar for Fraud Teams',
         p: (
-          <p className="text-base-content/90 leading-relaxed mb-4">On the other hand, Radar for Fraud Teams offers additional tools on top of Stripe Radar's foundational machine learning protections. It's tailored for businesses that require a more hands-on approach to managing fraud, providing enhanced features to fraud specialists or teams dedicated to this task.</p>
+          <p className="text-base-content/90 leading-relaxed mb-4">On the other hand, Radar for Fraud Teams offers additional tools on top of Stripe Radar&apos;s foundational machine learning protections. It&apos;s tailored for businesses that require a more hands-on approach to managing fraud, providing enhanced features to fraud specialists or teams dedicated to this task.</p>
         ),
         ul: (
           <ul className="list-inside list-disc text-base-content/90 leading-relaxed">
@@ -113,7 +113,7 @@ const articles = [
     section3: {
       h2: 'Stripe Radar Fee Comparison',
       p: (
-        <p className="text-base-content/90 leading-relaxed mb-4">Now, let's talk about the "Stripe Radar fee", which is a critical aspect for any business considering these services. Below we compare the fees for the two services.</p>
+        <p className="text-base-content/90 leading-relaxed mb-4">Now, let&apos;s talk about the &quot;Stripe Radar fee&quot;, which is a critical aspect for any business considering these services. Below we compare the fees for the two services.</p>
       ),
       table: (
         <div className="overflow-x-auto my-4 text-base-content border rounded-xl">
@@ -124,7 +124,7 @@ const articles = [
                 <th>Features Included</th>
               </tr>
               <tr>
-                <td>Stripe Radar's Machine Learning</td>
+                <td>Stripe Radar&apos;s Machine Learning</td>
                 <td>
                   Integrated with Stripe payments at <strong>no additional cost</strong>
                 </td>
@@ -150,13 +150,13 @@ const articles = [
         </div>
       ),
       p2: (
-        <p className="text-base-content/90 leading-relaxed">Please note that the pricing is subject to change, and it's always best to check the latest <Link href="https://stripe.com/radar/pricing" className="link link-primary">Stripe Radar pricing</Link> for the most accurate information.</p>
+        <p className="text-base-content/90 leading-relaxed">Please note that the pricing is subject to change, and it&apos;s always best to check the latest <Link href="https://stripe.com/radar/pricing" className="link link-primary">Stripe Radar pricing</Link> for the most accurate information.</p>
       )
       },
     section4: {
       h2: 'Key Takeaways',
       p: (
-        <p className="text-base-content/90 leading-relaxed mb-4">To decide between Stripe Radar's machine learning and Radar for Fraud Teams, consider the following:</p>
+        <p className="text-base-content/90 leading-relaxed mb-4">To decide between Stripe Radar&apos;s machine learning and Radar for Fraud Teams, consider the following:</p>
       ),
       ul: (
         <ul className="list-inside list-disc text-base-content/90 leading-relaxed">
@@ -172,7 +172,7 @@ const articles = [
         <p className="text-base-content/90 leading-relaxed mb-4">The choice between using Stripe Radar’s machine learning capabilities and investing in Radar for Fraud Teams comes down to the specific needs of your business.<br/>Both offer compelling features to fight fraud, but the latter provides additional customization and control that might be necessary for some businesses.</p>
       ),
       p2: (
-        <p className="text-base-content/90 leading-relaxed">If you're looking for a way to reduce chargebacks, consider adding <Link className="link link-primary" href="/">ByeDispute</Link> to your fraud prevention arsenal. It's a powerful tool that automatically detects duplicate payments, verifies customer emails, and checks for stolen credit cards.</p>
+        <p className="text-base-content/90 leading-relaxed">If you&apos;re looking for a way to reduce chargebacks, consider adding <Link className="link link-primary" href="/">ByeDispute</Link> to your fraud prevention arsenal. It&apos;s a powerful tool that automatically detects duplicate payments, verifies customer emails, and checks for stolen credit cards.</p>
       ),
       }
     },
@@ -195,7 +195,7 @@ const articles = [
         h2: 'What is Stripe?',
         p: (
           <p className="text-base-content/90 leading-relaxed">
-            <Link href="https://stripe.com/" className="link link-primary">Stripe</Link> is a comprehensive payment processing platform designed to facilitate online and in-app transactions. It's a one-stop shop for handling everything from secure credit card payments to direct bank transfers. With Stripe, you can accept payments from around the globe, manage recurring subscriptions, and much more.
+            <Link href="https://stripe.com/" className="link link-primary">Stripe</Link> is a comprehensive payment processing platform designed to facilitate online and in-app transactions. It&apos;s a one-stop shop for handling everything from secure credit card payments to direct bank transfers. With Stripe, you can accept payments from around the globe, manage recurring subscriptions, and much more.
           </p>
         ),
       },
@@ -244,7 +244,7 @@ const articles = [
       section3: {
         h2: 'Dispute and Refund Fees',
         p: (
-          <p className="text-base-content/90 leading-relaxed">In the event of a dispute (chargeback), Stripe charges a fee of <strong className="text-base-content">$15.00</strong> per incident. This fee applies whether or not the dispute is resolved in your favor. It's also worth noting that the original transaction fees aren't returned in case of refunds. Here are <Link className="link link-primary" href="/5-effective-ways-to-reduce-chargebacks-on-stripe">5 tips to help you avoid disputes</Link>.</p>
+          <p className="text-base-content/90 leading-relaxed">In the event of a dispute (chargeback), Stripe charges a fee of <strong className="text-base-content">$15.00</strong> per incident. This fee applies whether or not the dispute is resolved in your favor. It&apos;s also worth noting that the original transaction fees aren&apos;t returned in case of refunds. Here are <Link className="link link-primary" href="/5-effective-ways-to-reduce-chargebacks-on-stripe">5 tips to help you avoid disputes</Link>.</p>
         ),
       },
       section4: {
@@ -254,13 +254,13 @@ const articles = [
         },
         h2: 'Getting Paid with Stripe',
         p: (
-          <p className="text-base-content/90 leading-relaxed">Stripe allows flexibility in how and when you get paid. By default, you can expect payouts to your bank account on a 2 to 7 day rolling basis, after the initial transaction. You can also opt for weekly or monthly payouts if that better suits your business operations.<br/>If you're sending money to a bank account outside the country you're operating in, you can expect an additional fee of <strong className="text-base-content">1%</strong> per payout. You can <Link href="https://stripe.com/resources/more/payouts-explained" className="link link-primary">learn more about Stripe's payout fees with this guide</Link>.</p>
+          <p className="text-base-content/90 leading-relaxed">Stripe allows flexibility in how and when you get paid. By default, you can expect payouts to your bank account on a 2 to 7 day rolling basis, after the initial transaction. You can also opt for weekly or monthly payouts if that better suits your business operations.<br/>If you&apos;re sending money to a bank account outside the country you&apos;re operating in, you can expect an additional fee of <strong className="text-base-content">1%</strong> per payout. You can <Link href="https://stripe.com/resources/more/payouts-explained" className="link link-primary">learn more about Stripe&apos;s payout fees with this guide</Link>.</p>
         ),
       },
       section5: {
         h2: 'Understanding Taxes and Compliance',
         p: (
-          <p className="text-base-content/90 leading-relaxed">Depending on your location, Stripe may charge taxes on its services. Make sure to provide accurate tax information to ensure proper invoicing. Stripe's platform is designed to maintain rigorous compliance with financial regulations worldwide, offering peace of mind to its users.</p>
+          <p className="text-base-content/90 leading-relaxed">Depending on your location, Stripe may charge taxes on its services. Make sure to provide accurate tax information to ensure proper invoicing. Stripe&apos;s platform is designed to maintain rigorous compliance with financial regulations worldwide, offering peace of mind to its users.</p>
         ),
       },
       section6: {
@@ -288,13 +288,13 @@ const articles = [
       section1: {
         h2: 'Introduction',
         p: (
-          <p className="text-base-content/90 leading-relaxed">For businesses utilizing Stripe for payment processing, chargebacks and fraud can be a critical concern, especially for newer accounts. A single chargeback can trigger significant fees and potentially lead to account closure.<br/>It's crucial to establish robust defenses against fraudulent activity to safeguard your revenue and maintain your account's standing. Below are five vital strategies to secure your Stripe account against chargebacks and fraud.</p>
+          <p className="text-base-content/90 leading-relaxed">For businesses utilizing Stripe for payment processing, chargebacks and fraud can be a critical concern, especially for newer accounts. A single chargeback can trigger significant fees and potentially lead to account closure.<br/>It&apos;s crucial to establish robust defenses against fraudulent activity to safeguard your revenue and maintain your account&apos;s standing. Below are five vital strategies to secure your Stripe account against chargebacks and fraud.</p>
         ),
       },
       section2: {
         h3: '1. Implement 3D Secure Authentication',
         p: (
-          <p className="text-base-content/90 leading-relaxed">Introducing an extra layer of security through 3D Secure (3DS) can significantly decrease fraudulent transactions.<br/>Stripe's Radar, a machine learning tool included with standard accounts, already offers great protection but can be enhanced by utilizing 3DS whenever possible. By <Link href="https://dashboard.stripe.com/settings/radar/rules" className="link link-primary">enabling a Radar rule that requests 3DS</Link> based on card issuer recommendations, your business can further secure each transaction.</p>
+          <p className="text-base-content/90 leading-relaxed">Introducing an extra layer of security through 3D Secure (3DS) can significantly decrease fraudulent transactions.<br/>Stripe&apos;s Radar, a machine learning tool included with standard accounts, already offers great protection but can be enhanced by utilizing 3DS whenever possible. By <Link href="https://dashboard.stripe.com/settings/radar/rules" className="link link-primary">enabling a Radar rule that requests 3DS</Link> based on card issuer recommendations, your business can further secure each transaction.</p>
         ),
         image: {
           src: '/stripe_radar_3ds_rule.529808b4.jpg',
@@ -304,7 +304,7 @@ const articles = [
       section3: {
         h3: '2. Enforce Card Verification Code (CVC) Checks',
         p: (
-          <p className="text-base-content/90 leading-relaxed">One of the simplest yet most effective measures to prevent fraud is to verify the card's CVC. Ensure that your Stripe account settings are configured to reject transactions if the CVC check fails.<br/>This setup helps prevent unauthorized payments and minimizes the risk of chargebacks due to stolen card information.</p>
+          <p className="text-base-content/90 leading-relaxed">One of the simplest yet most effective measures to prevent fraud is to verify the card&apos;s CVC. Ensure that your Stripe account settings are configured to reject transactions if the CVC check fails.<br/>This setup helps prevent unauthorized payments and minimizes the risk of chargebacks due to stolen card information.</p>
         ),
         image: {
           src: '/stripe_radar_cvc_rul.c5076d4b.jpg',
@@ -314,7 +314,7 @@ const articles = [
       section4: {
         h3: '3. Conduct Preemptive Refunds',
         p: (
-          <p className="text-base-content/90 leading-relaxed">When encountering any suspicious activity, such as duplicate payments, questionable email addresses, or alerts from Stripe's Early Fraud Warning system, it's advisable to issue a refund proactively.<br/>While it may feel counterintuitive, refunding potentially fraudulent transactions can save you from the much larger headache of chargebacks and the associated fees.</p>
+          <p className="text-base-content/90 leading-relaxed">When encountering any suspicious activity, such as duplicate payments, questionable email addresses, or alerts from Stripe&apos;s Early Fraud Warning system, it&apos;s advisable to issue a refund proactively.<br/>While it may feel counterintuitive, refunding potentially fraudulent transactions can save you from the much larger headache of chargebacks and the associated fees.</p>
         ),
       },
       section5: {
@@ -336,13 +336,13 @@ const articles = [
       section7: {
         h3: '6. Bonus Tip: Opt for Advanced Dispute Prevention Services',
         p: (
-          <p className="text-base-content/90 leading-relaxed">Enhance your fraud prevention arsenal with services like <Link className="link link-primary" href="/">ByeDispute</Link>, which offer sophisticated features to preempt disputes.<br/>These tools verify the validity of customer emails, detect duplicate payments, and check for stolen credit cards, keeping chargebacks at bay. Investing in such services can significantly safeguard your Stripe account's integrity and your business's revenue.</p>
+          <p className="text-base-content/90 leading-relaxed">Enhance your fraud prevention arsenal with services like <Link className="link link-primary" href="/">ByeDispute</Link>, which offer sophisticated features to preempt disputes.<br/>These tools verify the validity of customer emails, detect duplicate payments, and check for stolen credit cards, keeping chargebacks at bay. Investing in such services can significantly safeguard your Stripe account&apos;s integrity and your business&apos;s revenue.</p>
         ),
       },
       section8: {
         h2: 'Conclusion',
         p: (
-          <p className="text-base-content/90 leading-relaxed">By integrating these strategies within your Stripe account's operations, you'll effectively reduce the risk of chargebacks and fortify your defenses against fraudulent transactions. Remember that maintaining rigorous security measures and delivering exceptional customer service are your best weapons in the fight against fraud.<br/>Secure your transactions, instill confidence in your customers, and enjoy a smoother, more reliable payment processing experience with Stripe.</p>
+          <p className="text-base-content/90 leading-relaxed">By integrating these strategies within your Stripe account&apos;s operations, you&apos;ll effectively reduce the risk of chargebacks and fortify your defenses against fraudulent transactions. Remember that maintaining rigorous security measures and delivering exceptional customer service are your best weapons in the fight against fraud.<br/>Secure your transactions, instill confidence in your customers, and enjoy a smoother, more reliable payment processing experience with Stripe.</p>
         ),
       },
     },
@@ -365,7 +365,7 @@ const articles = [
       section1: {
         h2: 'Introduction',
         p: (
-          <p className="text-base-content/90 leading-relaxed">Subscriptions are the lifeline of many online businesses. They provide predictable revenue and help shape a loyal user base. For your landing page generator app (AI tool), charging $15 per month, we'll guide you through setting up Stripe Subscriptions using NextJS.<br/>If you want a more in-depth guide on how Stripe Subscriptions work, check out our <Link className="link link-primary" href="/how-stripe-subscriptions-work">Stripe Subscriptions Explained</Link> article.</p>
+          <p className="text-base-content/90 leading-relaxed">Subscriptions are the lifeline of many online businesses. They provide predictable revenue and help shape a loyal user base. For your landing page generator app (AI tool), charging $15 per month, we&apos;ll guide you through setting up Stripe Subscriptions using NextJS.<br/>If you want a more in-depth guide on how Stripe Subscriptions work, check out our <Link className="link link-primary" href="/how-stripe-subscriptions-work">Stripe Subscriptions Explained</Link> article.</p>
         ),
       },
       section2: {
@@ -375,9 +375,9 @@ const articles = [
           <p className="text-base-content/90 leading-relaxed">No code yet! Start by configuring your Stripe account:</p>
           <ol className="list-inside list-disc text-base-content/90 leading-relaxed">
             <li className="list-item">Register an account at Stripe and sign in.</li>
-            <li className="list-item">Add your landing page generator as a new product under the "Products" section in Stripe.</li>
-            <li className="list-item">Create a monthly subscription plan for $15 in the "Pricing" section of your product.</li>
-            <li className="list-item">Note down the API keys from the "Developers" section for later use.</li>
+            <li className="list-item">Add your landing page generator as a new product under the &quot;Products&quot; section in Stripe.</li>
+            <li className="list-item">Create a monthly subscription plan for $15 in the &quot;Pricing&quot; section of your product.</li>
+            <li className="list-item">Note down the API keys from the &quot;Developers&quot; section for later use.</li>
           </ol>
           </>
         ),
@@ -416,7 +416,7 @@ export default async (req, res) =&gt; {
       section4: {
         h2: 'Handling Subscriptions on the Frontend',
         p: (
-          <p className="text-base-content/90 leading-relaxed">Create a subscription button on your app's frontend to allow users to start the checkout process. When clicked, it should call your serverless function to create a Stripe Checkout session:</p>
+          <p className="text-base-content/90 leading-relaxed">Create a subscription button on your app&apos;s frontend to allow users to start the checkout process. When clicked, it should call your serverless function to create a Stripe Checkout session:</p>
         ),
         pre: (
           <pre className="text-xs font-mono bg-neutral text-neutral-content p-6 rounded-xl my-4 overflow-x-scroll">
@@ -496,7 +496,7 @@ const subscribeUser = async () =&gt; {
       <>
       <section>
         <h3 className="text-xl lg:text-2xl font-bold tracking-tight mb-2 text-base-content">Activating and Deactivating User Subscriptions</h3>
-        <p className="text-base-content/90 leading-relaxed">When handling these webhook events, you'll want to update user's subscription status in your own system. For example:</p>
+        <p className="text-base-content/90 leading-relaxed">When handling these webhook events, you&apos;ll want to update user&apos;s subscription status in your own system. For example:</p>
         <pre className="text-xs font-mono bg-neutral text-neutral-content p-6 rounded-xl my-4 overflow-x-scroll">
           <code>{`// pseudo-code: activate or deactivate user based on Stripe webhook event
 function manageUserSubscription(event) {
@@ -516,7 +516,7 @@ function manageUserSubscription(event) {
       <p className="text-base-content/90 leading-relaxed">Remember to protect your webhook endpoint. Only Stripe should be calling this function, so verify the event with <code className="text-xs font-mono bg-base-300 px-1 py-0.5 rounded">stripe.webhooks.constructEvent</code> as shown above. Also, ensure that your Stripe secret and endpoint secrets are stored securely and not hardcoded into your codebase.</p>
     ),
     p4: (
-      <p className="text-base-content/90 leading-relaxed">By setting up webhook handling properly, you ensure that your application remains in sync with the reality of your users' subscription status on Stripe.</p>
+      <p className="text-base-content/90 leading-relaxed">By setting up webhook handling properly, you ensure that your application remains in sync with the reality of your users&apos; subscription status on Stripe.</p>
     ),
     },
     section6: {
