@@ -149,7 +149,7 @@ export default function Home() {
                 <p className="text-base-content/80 text-sm mb-2 md:mb-3">Posted by</p>
                   <Link title="Posts by Marc Lou" className="inline-flex items-center gap-2 group" rel="author" href="/author/marc">
                     <span itemProp="author">
-                      <Image alt="" loading="lazy" width="28" height="28" decoding="async" data-nimg="1" className="w-7 h-7 rounded-full object-cover object-center" srcSet="/marc.ba452a56.png 1x, /marc.ba452a56.png 2x" src="/marc.ba452a56.png" style={{ color: 'transparent' }}/>
+                      <Image alt="" loading="lazy" width="28" height="28" decoding="async" data-nimg="1" className="w-7 h-7 rounded-full object-cover object-center" src="/marc.ba452a56.png" style={{ color: 'transparent' }}/>
                     </span>
                     <span className="group-hover:underline">Marc Lou</span>
                   </Link>
