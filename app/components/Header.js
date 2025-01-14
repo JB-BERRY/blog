@@ -6,10 +6,15 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
+    const [isOpenCategories, setIsOpenCategories] = useState(false);
   
+    const toggleMenu = () => {
+      setIsOpenMenu(!isOpenMenu);
+    };
+
     const toggleCategories = () => {
-      setIsOpen(!isOpen);
+      setIsOpenCategories(!isOpenCategories);
     };
 
     const imageSrcSet = "/icon.png 1x, /icon.png 2x";
@@ -24,7 +29,7 @@ const Header = () => {
                 </Link>
             </div>
             <div className="flex lg:hidden">
-                <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
+                <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5" onClick={toggleMenu}>
                     <span className="sr-only">Open main menu</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-base-content">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
@@ -33,23 +38,23 @@ const Header = () => {
             </div>
             <div className="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center">
                 <Link className="link link-hover text-base-content/80 hover:text-base-content active:text-base-content focus:text-base-content duration-100" title="All Posts" href="/">All Posts</Link>
-                <div className={`relative z-30 ${isOpen ? 'data-headlessui-state="open"' : ''}`}>
+                <div className={`relative z-30 ${isOpenCategories ? 'data-headlessui-state="open"' : ''}`}>
                     <button
                     className="link no-underline flex flex-nowrap items-center gap-1 text-base-content/80 hover:text-base-content active:text-base-content focus:text-base-content duration-100"
                     title="Open Blog categories"
                     type="button"
-                    aria-expanded={isOpen}
-                    data-headlessui-state={isOpen ? 'open' : ''}
+                    aria-expanded={isOpenCategories}
+                    data-headlessui-state={isOpenCategories ? 'open' : ''}
                     id="headlessui-popover-button-:r0:"
                     aria-controls="headlessui-popover-panel-:r1o:"
                     onClick={toggleCategories}
                     >Categories
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={`w-5 h-5 duration-200 transform ${isOpen ? 'rotate-180' : ''}`}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={`w-5 h-5 duration-200 transform ${isOpenCategories ? 'rotate-180' : ''}`}>
                             <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"></path>
                         </svg>
                     </button>
-                    <div className={`transform ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'} transition-all duration-200`}>
-                        <div className="absolute left-0 z-30 mt-3 w-screen max-w-full sm:max-w-sm transform" id="headlessui-popover-panel-:r1o:" tabIndex="-1" data-headlessui-state={isOpen ? 'open' : ''}>
+                    <div className={`transform ${isOpenCategories ? 'scale-100 opacity-100' : 'scale-95 opacity-0'} transition-all duration-200`}>
+                        <div className="absolute left-0 z-30 mt-3 w-screen max-w-full sm:max-w-sm transform" id="headlessui-popover-panel-:r1o:" tabIndex="-1" data-headlessui-state={isOpenCategories ? 'open' : ''}>
                             <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-base-content ring-opacity-5">
                                 <div className="relative grid gap-2 bg-base-100 p-2 overflow-hidden">
                                     <div>
@@ -110,14 +115,14 @@ const Header = () => {
                 <button className="btn btn-primary md:btn-sm">Prevent disputes</button>
             </div>
         </nav>
-        <div className="relative z-50 hidden">
+        <div className={`relative z-50 ${isOpenMenu ? '' : 'hidden'}`}>
             <div className="fixed inset-y-0 right-0 z-10 w-full px-8 py-3 overflow-y-auto bg-base-200 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right transition ease-in-out duration-300">
                 <div className="flex items-center justify-between">
                     <Link className="flex items-center gap-2 shrink-0 " title="ByeDispute hompage" href="/">
                         <Image alt="ByeDispute logo" priority width="32" height="32" decoding="async" data-nimg="1" className="w-8" srcSet={imageSrcSet} src="/icon.png" style={{ color: 'transparent' }}/>
                         <span className="font-extrabold text-lg">ByeDispute</span>
                     </Link>
-                    <button type="button" className="-m-2.5 rounded-md p-2.5">
+                    <button type="button" className="-m-2.5 rounded-md p-2.5" onClick={() => setIsOpenMenu(false)}>
                         <span className="sr-only">Close menu</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path>
@@ -127,12 +132,28 @@ const Header = () => {
                 <div className="flow-root mt-6">
                     <div className="py-4">
                         <div className="flex flex-col gap-y-4 items-start">
-                            <Link className="link link-hover" title="All Posts" href="/blog">All Posts</Link>
-                            <button aria-expanded="false" type="button" className="link no-underline flex justify-between items-center w-full ">Categories
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 duration-200 ">
+                            <Link className="link link-hover" title="All Posts" href="/">All Posts</Link>
+                            <button aria-expanded="false" type="button" className="link no-underline flex justify-between items-center w-full " onClick={toggleCategories}>Categories
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={`w-5 h-5 duration-200 transform ${isOpenCategories ? 'rotate-180' : ''}`}>
                                     <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"></path>
                                 </svg>
                             </button>
+                            {isOpenCategories && (
+                            <ul className="space-y-4">
+                                <li>
+                                    <Link className="text-base-content/80 hover:text-base-content duration-100 link link-hover" href="/category/chargeback">Chargeback</Link>
+                                </li>
+                                <li>
+                                    <Link className="text-base-content/80 hover:text-base-content duration-100 link link-hover" href="/category/payment">Payment</Link>
+                                </li>
+                                <li>
+                                    <Link className="text-base-content/80 hover:text-base-content duration-100 link link-hover" href="/category/fee">Fee</Link>
+                                </li>
+                                <li>
+                                    <Link className="text-base-content/80 hover:text-base-content duration-100 link link-hover" href="/category/api">API</Link>
+                                </li>
+                            </ul>
+                            )}
                         </div>
                     </div>
                     <div className="divider"></div>
