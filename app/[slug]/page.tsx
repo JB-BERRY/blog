@@ -19,7 +19,7 @@ export default function Home() {
     NProgress.start(); // Démarrer la barre de progression
 
     let progress = 0;
-    let interval: number; // Déclaration de `interval` ici pour y accéder lors du nettoyage
+    let interval: number | NodeJS.Timeout; // Déclaration de `interval` ici pour y accéder lors du nettoyage
 
     // Fonction pour simuler un chargement de la page avec des étapes de progression
     const simulateLoading = () => {
