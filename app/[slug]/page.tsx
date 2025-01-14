@@ -155,7 +155,7 @@ export default function Home() {
                   </Link>
                 <div className="hidden md:block mt-12">
                   <p className=" text-base-content/80 text-sm  mb-2 md:mb-3">Related reading</p>
-                  <div class="space-y-2 md:space-y-5">
+                  <div className="space-y-2 md:space-y-5">
                     {article.related.map((relatedItem, index) => (
                       <div key={index}>
                         <p className="mb-0.5">
