@@ -1,101 +1,121 @@
-import Image from "next/image";
+'use client';
+
+import { useEffect } from 'react';
+import NProgress from 'nprogress';
+import Header from './components/Header';
+import Section from './components/Section';
+import Grid from './components/Grid';
+import BrowseArticles from './components/Browse';
+import Footer from './components/Footer';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  useEffect(() => {
+    // Configurer NProgress pour une progression rapide, sans spinner
+    NProgress.configure({ speed: 50, minimum: 0.1, showSpinner: false }); // Pas de spinner, progression rapide
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+    NProgress.start(); // Démarrer la barre de progression
+
+    let progress = 0;
+    let interval; // Déclaration de `interval` ici pour y accéder lors du nettoyage
+
+    // Fonction pour simuler un chargement de la page avec des étapes de progression
+    const simulateLoading = () => {
+      const totalTime = 300; // Temps total simulé pour le chargement de la page (1 seconde)
+      let startTime = Date.now(); // Temps de départ
+
+      const updateProgress = () => {
+        const elapsedTime = Date.now() - startTime; // Temps écoulé depuis le début du chargement
+        progress = Math.min(elapsedTime / totalTime, 1);
+        NProgress.set(progress);
+
+        // Dès que la barre atteint 100%, on termine
+        if (progress >= 1) {
+          NProgress.done();
+          clearInterval(interval); // Nettoyage de l'intervalle dès que la progression atteint 100%
+        }
+      };
+
+      // Mise à jour rapide toutes les 10ms
+      interval = setInterval(updateProgress, 10);
+    };
+
+    // Simuler un chargement de la page
+    simulateLoading();
+
+    // Nettoyage lors du démontage du composant
+    return () => {
+      clearInterval(interval); // Assurez-vous de nettoyer l'intervalle
+    };
+  }, []);
+
+  return (
+    <>
+      <style>{`
+        #nprogress {
+          pointer-events: none;
+        }
+        #nprogress .bar {
+          background: #4379FF;
+          position: fixed;
+          z-index: 1031;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 3px;
+        }
+        #nprogress .peg {
+          display: block;
+          position: absolute;
+          right: 0;
+          width: 100px;
+          height: 100%;
+          box-shadow: 0 0 10px #4379FF, 0 0 5px #4379FF;
+          opacity: 1;
+          transform: rotate(3deg) translate(0px, -4px);
+        }
+        #nprogress .spinner {
+          display: block;
+          position: fixed;
+          z-index: 1031;
+          top: 15px;
+          right: 15px;
+        }
+        #nprogress .spinner-icon {
+          width: 18px;
+          height: 18px;
+          box-sizing: border-box;
+          border: 2px solid transparent;
+          border-top-color: #4379FF;
+          border-left-color: #4379FF;
+          border-radius: 50%;
+          animation: nprogress-spinner 400ms linear infinite;
+        }
+        .nprogress-custom-parent {
+          overflow: hidden;
+          position: relative;
+        }
+        .nprogress-custom-parent #nprogress .bar,
+        .nprogress-custom-parent #nprogress .spinner {
+          position: absolute;
+        }
+        @keyframes nprogress-spinner {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      `}</style>
+      <Header />
+      <main className="min-h-screen max-w-6xl mx-auto p-8">
+        {/* Utilisation du composant Section */}
+        <Section />
+        <Grid />
+        <BrowseArticles />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <div className="h-24"></div>
+      <Footer />
+    </>
   );
 }
