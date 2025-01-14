@@ -163,7 +163,7 @@ export default function Home() {
                             className="link link-hover hover:link-primary font-medium"
                             title={relatedItem.title}
                             rel="bookmark"
-                            href={relatedItem.description}
+                            href={relatedItem.link}
                           >
                             {relatedItem.title}
                           </a>

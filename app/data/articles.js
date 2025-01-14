@@ -9,7 +9,7 @@ const articles = [
       ],
       date: 'November 24, 2023',
       related: [
-        { title: 'Code a Stripe Subscription Model With React and Nextjs', description: 'Stripe subscriptions are a great way to monetize your AI tool. We\'ll show you how to set up a subscription model using React and NextJS' },
+        { title: 'Code a Stripe Subscription Model With React and Nextjs', description: 'Stripe subscriptions are a great way to monetize your AI tool. We\'ll show you how to set up a subscription model using React and NextJS', link: '/how-to-code-a-stripe-subscription-model-with-react-and-nextjs' },
       ],
       intro: 'Let\'s set up up and manage a subscription model for a fictional habit tracker app called Trackify.',
       image: {
@@ -73,8 +73,8 @@ const articles = [
       ],
       date: 'November 30, 2023',
       related: [
-        { title: 'Understanding Stripe Fees: A Comprehensive Guide', description: 'Stripe fees can be confusing. We\'ll break down the different fees and how to calculate them. We\'ll also cover how to reduce your Stripe fees.' },
-        { title: '5 Effective Ways to Reduce Chargebacks on Stripe', description: 'Each chargeback can trigger significant fees and potentially lead to Stripe account closure. Let\'s take a look at how to protect your business from chargebacks.' },
+        { title: 'Understanding Stripe Fees: A Comprehensive Guide', description: 'Stripe fees can be confusing. We\'ll break down the different fees and how to calculate them. We\'ll also cover how to reduce your Stripe fees.', link: '/how-to-calculate-stripe-fees' },
+        { title: '5 Effective Ways to Reduce Chargebacks on Stripe', description: 'Each chargeback can trigger significant fees and potentially lead to Stripe account closure. Let\'s take a look at how to protect your business from chargebacks.', link: '/5-effective-ways-to-reduce-chargebacks-on-stripe' },
       ],
       intro: 'Stripe Radar and Radar for Fraud Teams are two fraud prevention tools with difference pricing and fees. We\'ll compare them and help you decide which one is right for you.',
       image: {
@@ -184,7 +184,7 @@ const articles = [
       ],
       date: 'November 17, 2023',
       related: [
-        { title: 'Stripe Radar: Machine Learning vs. Radar for Fraud Teams – What\'s the Difference?', description: 'Stripe Radar and Radar for Fraud Teams are two fraud prevention tools with difference pricing and fees. We\'ll compare them and help you decide which one is right for you.' },
+        { title: 'Stripe Radar: Machine Learning vs. Radar for Fraud Teams – What\'s the Difference?', description: 'Stripe Radar and Radar for Fraud Teams are two fraud prevention tools with difference pricing and fees. We\'ll compare them and help you decide which one is right for you.', link: '/stripe-radar-vs-radar-for-fraud-teams' },
       ],
       intro: 'Stripe fees can be confusing. We\'ll break down the different fees and how to calculate them. We\'ll also cover how to reduce your Stripe fees.',
       image: {
@@ -278,7 +278,7 @@ const articles = [
       ],
       date: 'November 10, 2023',
       related: [
-        { title: 'Stripe Radar: Machine Learning vs. Radar for Fraud Teams – What\'s the Difference?', description: 'Stripe Radar and Radar for Fraud Teams are two fraud prevention tools with difference pricing and fees. We\'ll compare them and help you decide which one is right for you.' },
+        { title: 'Stripe Radar: Machine Learning vs. Radar for Fraud Teams – What\'s the Difference?', description: 'Stripe Radar and Radar for Fraud Teams are two fraud prevention tools with difference pricing and fees. We\'ll compare them and help you decide which one is right for you.', link: '/stripe-radar-vs-radar-for-fraud-teams' },
       ],
       intro: 'Each chargeback can trigger significant fees and potentially lead to Stripe account closure. Let\'s take a look at how to protect your business from chargebacks.',
       image: {
@@ -355,7 +355,7 @@ const articles = [
       ],
       date: 'November 2, 2023',
       related: [
-        { title: 'Stripe Subscriptions Explained With a Real-World Example', description: 'Let\'s set up up and manage a subscription model for a fictional habit tracker app called Trackify.' },
+        { title: 'Stripe Subscriptions Explained With a Real-World Example', description: 'Let\'s set up up and manage a subscription model for a fictional habit tracker app called Trackify.', link: '/how-stripe-subscriptions-work' },
       ],
       intro: 'Stripe subscriptions are a great way to monetize your AI tool. We\'ll show you how to set up a subscription model using React and NextJS',
       image: {
